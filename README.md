@@ -6,10 +6,17 @@
 npm create astro@latest -- --template minimal
 ```
 ## GitHub Pages
+*Project settings*
 - Modify defineConfig in file astro.config.mjs 
 - Change site: "https://yourgithubaccount.github.io"
 - Add base: "yourrepositoryname"
 - More info: [configuration-reference](https://docs.astro.build/en/reference/configuration-reference/)
+
+*GitHub settings*
+- Check that repository is public (so that GitHub Pages is enabled for free account)
+- Check that build source is GitHub Actions
+  - Reposotory settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+- Follow tutorial to create workflow [actions/astro-deploy](https://github.com/marketplace/actions/astro-deploy)
 
 ## Project Structure
 
