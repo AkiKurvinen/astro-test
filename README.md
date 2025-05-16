@@ -12,11 +12,39 @@ npm create astro@latest -- --template minimal
 - Add base: "yourrepositoryname"
 - More info: [configuration-reference](https://docs.astro.build/en/reference/configuration-reference/)
 
+*Updating links*
+- Website is most likely beign deployed to subfolder (repository name) on github.io server
+- Because of that links have to be prefixed with repository name set via config
+```
+// Navigation.astro
+---
+import { base } from "astro:config/client";
+---
+<a href=`${base}/about/`>About</a>
+
+```
+
+```
+// MarkdownPostLayout.astro
+---
+import { base } from "astro:config/client";
+---
+<p class="tag"><a href={`${base}/tags/${tag}`}>{tag}</a></p>
+
+```
+```
+// index.astro
+---
+import { base } from "astro:config/client";
+<p class="tag"><a href={`${base}/tags/${tag}`}>{tag}</a></p>
+```
+
 *GitHub settings*
 - Check that repository is public (so that GitHub Pages is enabled for free account)
 - Check that build source is GitHub Actions
   - Reposotory settings -> Pages -> Build and deployment -> Source -> GitHub Actions
 - Follow tutorial to create workflow [actions/astro-deploy](https://github.com/marketplace/actions/astro-deploy)
+- Workflow will render website when Main branch changes
 
 ## Project Structure
 
