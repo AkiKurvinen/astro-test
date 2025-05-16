@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
+import { base } from 'astro:config/client';
 
 export async function getStaticPaths() {
   const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
