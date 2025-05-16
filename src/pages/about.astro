@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -15,7 +16,7 @@ const identity = {
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 // styles
@@ -24,13 +25,10 @@ const fontWeight = "bold"
 const textCase = "uppercase"
 ---
 
+<BaseLayout pageTitle={pageTitle}></BaseLayout>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+
         <style define:vars={{skillColor,fontWeight,textCase}}>
             h1 {
               color: purple;
@@ -44,9 +42,7 @@ const textCase = "uppercase"
           </style>
 	</head>
     <body>
-        <Header/>
 
-        <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
         <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
@@ -59,10 +55,7 @@ const textCase = "uppercase"
         <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
-        <Footer/>
-        <script>
-            import "../scripts/menu.js";
-          </script>
+
       </body>
 	</body>
 </html>
