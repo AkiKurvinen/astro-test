@@ -47,11 +47,10 @@ import { base } from "astro:config/client";
 - Workflow will render website when Main branch changes
 
 ## Testing
-*Unit and integration tests: Vitest*
-  - Add "test": "vitest" to "scripts" in package.json
+*Unit and integration tests: Vitest*  
   - npm run test
   
-*End-to-end tests: Playwright*
+*End-to-end tests: Playwright*  
   - npx playwright test
   - npx playwright show-report
 
