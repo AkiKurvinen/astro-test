@@ -46,8 +46,15 @@ import { base } from "astro:config/client";
 - Follow tutorial to create workflow [actions/astro-deploy](https://github.com/marketplace/actions/astro-deploy)
 - Workflow will render website when Main branch changes
 
-## Project Structure
+## Testing
+*Unit and integration tests: Vitest*  
+  - npm run test
+  
+*End-to-end tests: Playwright*  
+  - npx playwright test
+  - npx playwright show-report
 
+## Project Structure
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
@@ -65,7 +72,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -78,6 +85,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
