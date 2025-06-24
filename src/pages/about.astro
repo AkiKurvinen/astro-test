@@ -18,7 +18,6 @@ const finished = true;
 const goal = 3;
 
 // styles
-const skillColor = "navy";
 const fontWeight = "bold"
 const textCase = "uppercase"
 ---
@@ -27,13 +26,12 @@ const textCase = "uppercase"
 <html lang="en">
 	<head>
 
-        <style define:vars={{skillColor,fontWeight,textCase}}>
+        <style define:vars={{fontWeight,textCase}}>
             h1 {
               color: purple;
               font-size: 4rem;
             }
             .skill {
-                color: var(--skillColor);
                 font-weight: var(--fontWeight);
                 text-transform: var(--textCase);
             }

@@ -27,7 +27,7 @@ export default defineConfig({
   use: {
     headless: true,
     /* Base URL to use in actions like `await page.goto('/')`. */
-     baseURL: 'http://localhost:4321/astro-test/',
+    baseURL: 'http://localhost:4321/astro-test/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -72,9 +72,10 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-   webServer: {
-     command: 'npm run start',
-     url: 'http://localhost:4321/astro-test/',
-     reuseExistingServer: !process.env.CI,
-   },
+  webServer: {
+    command: 'npm run preview',
+    url: 'http://localhost:4321/astro-test/',
+    timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
+  },
 });
