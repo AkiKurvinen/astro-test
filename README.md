@@ -1,10 +1,21 @@
-# Astro blog tutorial
+# Blog with Astro framework
+- Basic blog website with static deploy to GitHub Pages
+- Standard pages, blog posts and [tag] routes
+- Blog posts in Markdown format
+- Based on [Build your first Astro Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
 
-## Created with Astro Starter Kit: Minimal
+## Commands
+All commands are run from the root of the project, from a terminal:
 
-```sh
-npm create astro@latest -- --template minimal
-```
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI   
+
 ## GitHub Pages
 *Project settings*
 - Modify defineConfig in file astro.config.mjs 
@@ -48,11 +59,17 @@ import { base } from "astro:config/client";
 
 ## Testing
 *Unit and integration tests: Vitest*  
-  - npm run test
-  
+```
+npm run test
+```
+
 *End-to-end tests: Playwright*  
-  - npx playwright test
-  - npx playwright show-report
+```
+npx playwright install
+npm run build
+npx playwright test
+npx playwright show-report
+```
 
 ## Project Structure
 Inside of your Astro project, you'll see the following folders and files:
@@ -72,32 +89,11 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## Commands
+## Created with Astro Starter Kit: Minimal
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```sh
+npm create astro@latest -- --template minimal
+```
 
 ## Want to learn more?
-
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Test
-- Playwright (E2E testing)
-```
-npx playwright install
-npm run build
-npx playwright test
-```
-
-- Vitest (unit testing)
-```
-npm run test
-```
