@@ -6,6 +6,6 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://akikurvinen.github.io",
-  base: "astro-test",
+  base: "game-recs-app",
   integrations: [preact()]
 });
